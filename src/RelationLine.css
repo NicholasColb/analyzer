@@ -1,0 +1,8 @@
+.Row {
+  display: flex;
+}
+.Col {
+  flex: 1;
+  padding: 1em;
+  border: none;
+}
