@@ -1,21 +1,30 @@
 .Row {
   display: flex;
+  width: 100vw;
+  text-align: center;
 }
 .Col {
   flex: 1;
-  padding: 1em;
   border: none;
 }
 
 .Box {
-  background: #232526;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #6A9113;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #141517, #6A9113);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #141517, #6A9113); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 
 
 
   position: absolute;
   bottom: 0;
   width: 100vw;
-  height: 65vh;
+  height: 60vh;
+}
+
+.RelationLine {
+  position: absolute;
+  bottom: 0;
+  height: 70vh;
+  background-color: cyan;
 }
