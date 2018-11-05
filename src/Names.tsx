@@ -1,27 +1,49 @@
 import Chip from '@material-ui/core/Chip';
 import * as React from 'react';
+import './Names.css';
 
+const names = [
+  'Markus Ihamuotila',
+  'Roosa Kujanpää',
+  'Joonas Rasa',
+  'Kasper Nurminen',
+  'Katariina Korolainen',
+  'Atte Mäkinen',
+  'Ella Huttunen',
+  'Aleksi Löytynoja',
+  'Samuel Moawad',
+  'Sini Hölsä',
+  'Elena Rima',
+  'Arttu Engström',
+  'Antti Kari-Koskinen',
+  'Ella Palo',
+  'Juhana Saarinen',
+  'Aura Kiiskinen',
+  'Anni Kivilaakso',
+  'Riikka Eskola',
+  'Satu Reijonen',
+  'Eino Vuorinen',
+  'Sanni Lares',
+  'Aili Hukka',
+  'Emma Kankkunen',
+  'Liva Westerback',
+  'Julia Korhonen',
+  'Marika Sillanpää',
+  'Ella Anttila',
+  'Inkeri Rouvinen',
+  'Max Naumanen',
+  'Ville Pelkonen'
 
+];
 
 class Names extends React.Component<any, any> {
   constructor(props: any) {
     super(props);
+    const arr = names;
+    const ind = names.indexOf(this.props.userName);
+    arr.splice(ind,1)
     this.state = {
-      names: [
-        'Markus Ihamuotila',
-        'Roosa Kujanpää',
-        'Joonas Rasa',
-        'Kasper Nurminen',
-        'Atte Mäkinen',
-        'Ella Huttunen',
-        'Aleksi Löytynoja',
-        'Samuel Moawad',
-        'Sini Hölsä',
-        'Elena Rima',
-        'Arttu Engström',
-        'Joonas Pöntinen',
-        'Aapo Kinnari'
-      ]
+      names: arr
     }
   }
 
@@ -36,6 +58,10 @@ class Names extends React.Component<any, any> {
               const array = [...this.state.names];
               array.splice(index, 1);
               this.setState({ names: array});
+              if(array.length === 0) {
+                this.props.callReady();
+              }
+
             });
 
   }
@@ -50,10 +76,13 @@ class Names extends React.Component<any, any> {
       });
 
   }
+
+
   public render() {
     return (
-      <div className="App">
+      <div className="Names">
           {this.renderChips()}
+
       </div>
     );
   }
