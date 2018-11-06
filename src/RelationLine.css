@@ -6,6 +6,7 @@
 .Col {
   flex: 1;
   border: none;
+  font-size: 1em;
 }
 
 .Box {
@@ -19,12 +20,12 @@
   position: absolute;
   bottom: 0;
   width: 100vw;
-  height: 60vh;
+  height: 45vh;
 }
 
 .RelationLine {
   position: absolute;
   bottom: 0;
-  height: 70vh;
-  background-color: cyan;
+  height: 60vh;
+
 }

@@ -1,7 +1,5 @@
 import * as React from 'react';
 import { Redirect } from 'react-router-dom';
-import './App.css';
-import logo from './logo.svg';
 import Names from './Names';
 import RelationLine from './RelationLine';
 
@@ -37,13 +35,10 @@ class App extends React.Component<any, any> {
 
     return (
 
-        <div className="App">
+        <div>
 
           {this.state.userData.userName === null ? <Redirect to="/login" /> : null}
-              <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <h1 className="App-title">IV17 analyzer</h1>
-              </header>
+
                 {!this.state.ready ? <p> Hey, {this.firstName()}! Please click your classmates into the green box </p>
                                    : <p> Click the submit button when you're ready! </p>
                 }

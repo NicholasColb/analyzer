@@ -14,14 +14,12 @@ import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 import LockIcon from '@material-ui/icons/Lock';
 
-import './App.css';
-import logo from './logo.svg';
 
 import {
   cardStyle,
   headlineStyle,
   lockIconStyle,
-  loginGuideStyle,
+  // loginGuideStyle,
   loginPageContainer
 } from './LoginStyles';
 
@@ -88,7 +86,7 @@ class Login extends React.Component<any, any> {
 
   public onClick = (event: any) => {
     if(this.state.name != null && this.state.password != null) {
-      const url = "https://localhost:443/login";
+      const url = "http://35.228.39.186/login";
       const auth = 'Basic ' + new Buffer(this.state.name + ':' + this.state.password).toString('base64');
       fetch(url, {
         headers: {
@@ -111,11 +109,6 @@ class Login extends React.Component<any, any> {
 
 
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">IV17 analyzer</h1>
-        </header>
         <div style={loginPageContainer}>
           <Typography gutterBottom={true} style={headlineStyle} variant="display3">Welcome</Typography>
           <Card style={cardStyle}>
@@ -145,16 +138,14 @@ class Login extends React.Component<any, any> {
               <Button variant="contained" color="primary" onClick={this.onClick}>
                 Login
               </Button>
-
+              <br />
               <LockIcon style={lockIconStyle} />
-              <Typography gutterBottom={true} style={loginGuideStyle}>You must be logged in to continue.</Typography>
-
             </CardContent>
           </Card>
-
+          {this.state.redirect ? <Redirect to="/main" /> : null}
         </div>
-        {this.state.redirect ? <Redirect to="/main" /> : null}
-      </div>
+
+
     );
   }
 }

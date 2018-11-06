@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Ball from './Ball';
 
+import ArrowIcon from '@material-ui/icons/ArrowRightAlt';
 import ReadyButton from './ReadyButton';
 
 
@@ -93,7 +94,9 @@ class RelationLine extends React.Component<any, any> {
         {this.checkReady()}
         <div className="Row">
           <p className="Col"> En vielä tunne </p>
-          <p className="Col"> Tunnen jotenkuten </p>
+          <ArrowIcon className="Col" style={{position: 'relative', top: '15px'}}/>
+          <p className="Col"> Tunnen</p>
+          <ArrowIcon className="Col" style={{position: 'relative', top: '15px'}}/>
           <p className="Col"> Tunnen hyvin </p>
 
         </div>
