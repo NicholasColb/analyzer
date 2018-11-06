@@ -30,30 +30,16 @@ export const cardStyle: React.CSSProperties = {
     right: 0,
     paddingTop: '5vh',
     paddingBottom: '5vh',
-    textAlign: 'center'
+    textAlign: 'center',
 };
 
 export const lockIconStyle: React.CSSProperties = {
-    width: '10vw',
-    maxWidth: '100px',
-    height: 'auto',
     opacity: 0.6,
-    position: 'absolute',
-    bottom: 30,
-    left: 0,
-    right: 0,
-    marginRight: 'auto',
-    marginLeft: 'auto',
+    paddingTop: '50px',
 
 };
 
 export const loginGuideStyle: React.CSSProperties = {
-  position: 'absolute',
-  left: 0,
-  right: 0,
-  bottom: 150,
-  marginBottom: 'auto',
-  marginRight: 'auto',
-  marginLeft: 'auto',
+  paddingTop: '50px',
 
 };

@@ -11,7 +11,7 @@ class ReadyButton extends React.Component<any, any> {
 
   public onClick = () => {
     if(confirm('Send results to server?')) {
-        const url = 'https://localhost:443/insert';
+        const url = 'http://35.228.39.186/insert';
         const arr = this.props.data.map((e: any) => {
           return ({name: e.name, rank: e.x});
         });
